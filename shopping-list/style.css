@@ -1,0 +1,71 @@
+#app {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem auto;
+  width: 300px;
+}
+
+#search-items {
+  position: relative;
+}
+
+#search-items-result {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1px solid #000;
+  margin: 10px 0 0 0;
+  display: none;
+  background: white;
+  list-style: none;
+  padding: 0 .5rem;
+}
+
+#selected-items {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.selected-item {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.selected-item.checked > * {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+.selected-item-label {
+  flex-grow: 1;
+}
+
+.selected-item-toggle, .selected-item-delete {
+  border: 0;
+  background: none;
+}
+
+.selected-item-delete {
+  font-size: 1.25rem;
+  border-radius: 2px;
+}
+
+.selected-item-toggle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.selected-item-toggle:hover, .selected-item-delete:hover {
+  background: #ccc;
+}
+
+.selected-item:not(.checked) .selected-item-toggle {
+  border: 1px solid #333;
+}
